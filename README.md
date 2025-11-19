@@ -18,7 +18,7 @@ JPEGtoDNA uses a XORing and Rotatory Encoding approach to mitigate DNA synthesis
 
 The code is able to afford subsitutions but is not sutiable for large deletions.
 
-Overall this code is able to encode a BMP image into a JPEG file that has many less bits and includes the progressive encoding (bmp_to_jpeg.py). Then this JPEG file can be encoded in DNA with some DNA synthesis mitigation functions such as rotatory encoding and whitening to avoid repeats and homopolymeric DNA sequences that would be difficult to make (jpeg_to_dna_rotatoryEncoding.py / dna_to_jpeg_rotatoryEncoding_progressive_layered.py / dna_to_jpeg_rotatoryEncoding_progressive_layered_no_rs.py). 
+Overall this code is able to encode a BMP image into a JPEG file that has many less bits and includes the progressive encoding (bmp_to_jpeg.py). Then this JPEG file can be encoded in DNA with some DNA synthesis mitigation functions such as rotatory encoding and whitening to avoid repeats and homopolymeric DNA sequences that would be difficult to make (jpeg_to_dna_rotatoryEncoding.py / dna_to_jpeg_rotatoryEncoding_progressive_layered.py / dna_to_jpeg_rotatoryEncoding_progressive_layered_no_rs.py). The frist DNA strand can reserved for header-only using the flag --no_pad_header and can be padded or non-padded to whether or not exclude payload data to subsequent strands.
 
 Finally when using the code (dna_to_jpeg.py / jpeg_to_dna_rotatoryEncoding_progressive_layered.py / jpeg_to_dna_rotatoryEncoding_progressive_layered_no_rs.py) it returns the correct JPEG image either in full (dna_to_jpeg.py) or generating images with progressive layers of greater resolution (jpeg_to_dna_rotatoryEncoding_progressive_layered.py / jpeg_to_dna_rotatoryEncoding_progressive_layered_no_rs.py).
  
